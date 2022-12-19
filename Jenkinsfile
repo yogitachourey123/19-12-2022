@@ -24,13 +24,7 @@ pipeline {
          bat 'docker push yogitachourey/hello_python_jenkins_docker_image:%BUILD_ID%'
         }          
           }
-        
-        docker {
-            image 'yogitachourey/hello_python_jenkins_docker_image:%BUILD_ID%'
-        registryCredentialsId 'Dockerhub'
-       
-      }
-    }
+     }
   }
 
 
