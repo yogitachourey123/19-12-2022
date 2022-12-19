@@ -15,13 +15,13 @@ pipeline {
         }
         stage('tag') {
             steps {
-                bat 'docker tag  hello_python_jenkins_docker_image yogitachourey/hello_java_jenkins_docker_image'
+                bat 'docker tag  hello_python_jenkins_docker_image yogitachourey/hello_java_jenkins_docker_image:%BUILD_ID%'
                 
             }
         }
         stage('docker push'){
         steps {
-         bat 'docker push yogitachourey/hello_python_jenkins_docker_image'
+         bat 'docker push yogitachourey/hello_python_jenkins_docker_image:%BUILD_ID%'
         }          
           }
         
