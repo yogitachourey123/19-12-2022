@@ -1,5 +1,5 @@
 
-FROM python
+FROM python:3
 
 RUN python Hello.py
 
