@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    
     stages {
          stage('build') {
             steps {
@@ -23,7 +22,14 @@ pipeline {
         stage('docker push'){
         steps {
          bat 'docker push yogitachourey/hello_python_jenkins_docker_image'
-        }           }
+        }          
+          }
+        
+        docker {
+            image 'yogitachourey/hello_python_jenkins_docker_image'
+        registryCredentialsId 'Dockerhub'
+       
+      }
     }
   }
 
