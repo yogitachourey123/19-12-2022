@@ -26,7 +26,7 @@ pipeline {
           }
         
         docker {
-            image 'yogitachourey/hello_python_jenkins_docker_image'
+            image 'yogitachourey/hello_python_jenkins_docker_image:%BUILD_ID%'
         registryCredentialsId 'Dockerhub'
        
       }
