@@ -3,13 +3,13 @@ pipeline {
     stages {
          stage('build') {
             steps {
-               bat 'docker build -t hello_python_jenkins_docker_image .'
+               bat 'docker build -t hello_python_jenkins_docker_image:%BUILD_ID% .'
                 
             }
         }
         stage('run') {
             steps {
-                bat 'docker run -t hello_python_jenkins_docker_image'
+                bat 'docker run -t hello_python_jenkins_docker_image:%BUILD_ID%'
                 
             }
         }
