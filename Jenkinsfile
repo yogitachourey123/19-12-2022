@@ -21,7 +21,7 @@ pipeline {
         }
         stage('docker push'){
         steps {
-         bat 'docker push yogitachourey/hello_python_jenkins_docker_image:%BUILD_ID%'
+         bat 'docker push yogitachourey/hello_python_jenkins_docker_image'
         }          
           }
      }
